@@ -39,6 +39,5 @@ export const markerMemStore = {
     marker.title = updatedMarker.title;
     marker.location = updatedMarker.location;
     marker.date = updatedMarker.date;
-    marker.timestamp = updatedMarker.timestamp;
   },
 };

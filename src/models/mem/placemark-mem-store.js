@@ -11,19 +11,26 @@ export const placemarkMemStore = {
   async addPlacemark(placemark) {
     placemark._id = v4();
     placemarks.push(placemark);
-    return placemarks;
+    return placemark;
   },
 
   async getPlacemarkById(id) {
     const list = placemarks.find((placemark) => placemark._id === id);
-    list.markers = await markerMemStore.getMarkersByPlacemarkId(list._id);
-    return list;
+    if (list) {
+      list.markers = await markerMemStore.getMarkersByPlacemarkId(list._id);
+      return list;
+    }
+    return null;
+  },
+
+  async getUserPlacemarks(userid) {
+    return placemarks.filter((placemark) => placemark.userid === userid);
   },
 
   async deletePlacemarkById(id) {
     const index = placemarks.findIndex((placemark) => placemark._id === id);
-    placemarks.splice(index, 1);
-  },
+    if (index !== -1) placemarks.splice(index, 1);
+  }, 
 
   async deleteAllPlacemarks() {
     placemarks = [];

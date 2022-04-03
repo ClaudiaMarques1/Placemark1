@@ -4,7 +4,6 @@
       <th>Marker</th>
       <th>Location</th>
       <th>Date</th>
-      <th>Timestamp</th>
     </tr>
   </thead>
   <tbody>
@@ -20,7 +19,14 @@
           {{date}}
         </td>
         <td>
-          {{timestamp}}
+          <a href="/placemark/{{../placemark._id}}/editmarker/{{_id}}" class="ui icon button">
+            <i class="fas fa-edit"></i>
+          </a>
+        </td>
+                <td>
+          <a href="/placemark/{{../placemark._id}}/deletemarker/{{_id}}" class="ui icon button">
+            <i class="fas fa-trash"></i>
+          </a>
         </td>
       </tr>
     {{/each}}
