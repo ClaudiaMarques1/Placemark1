@@ -1,0 +1,54 @@
+{
+  "name": "placemark",
+  "version": "1.0.0",
+  "main": "src/server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js",
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "test": "./node_modules/mocha/bin/mocha --ui tdd test/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaudiaMarques1/Placemark.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaudiaMarques1/Placemark/issues"
+  },
+  "homepage": "https://github.com/ClaudiaMarques1/Placemark#readme",
+  "devDependencies": {
+    "axios": "^0.26.1",
+    "chai": "^4.3.4",
+    "eslint": "^8.11.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-import": "^2.25.4",
+    "mocha": "^9.2.1",
+    "prettier": "^2.6.0"
+  },
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "dotenv": "^16.0.0",
+    "google-maps": "^4.3.3",
+    "handlebars": "^4.7.7",
+    "hapi": "^18.1.0",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-swagger": "^14.2.5",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^3.0.0",
+    "mais-mongoose-seeder": "^1.0.7",
+    "mongoose": "^6.2.7",
+    "uuid": "^8.3.2"
+  },
+  "directories": {
+    "test": "test"
+  },
+  "description": ""
+}
