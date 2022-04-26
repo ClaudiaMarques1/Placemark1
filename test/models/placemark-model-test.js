@@ -1,6 +1,6 @@
 import { assert } from "chai";
 import { db } from "../../src/models/db.js";
-import { testPlacemarks, claudia } from "../fixtures.js";
+import { testPlacemarks, dublin } from "../fixtures.js";
 import { assertSubset } from "../test-utils.js";
 
 suite("Placemark Model tests", () => {
@@ -15,8 +15,8 @@ suite("Placemark Model tests", () => {
   });
 
   test("create a placemark", async () => {
-    const placemark = await db.placemarkStore.addPlacemark(claudia);
-    assertSubset(claudia, placemark);
+    const placemark = await db.placemarkStore.addPlacemark(dublin);
+    assertSubset(dublin, placemark);
     assert.isDefined(placemark._id);
   });
 
@@ -29,9 +29,9 @@ suite("Placemark Model tests", () => {
   });
 
   test("get a placemark - success", async () => {
-    const placemark = await db.placemarkStore.addPlacemark(claudia);
+    const placemark = await db.placemarkStore.addPlacemark(dublin);
     const returnedPlacemark = await db.placemarkStore.getPlacemarkById(placemark._id);
-    assertSubset(claudia, placemark);
+    assertSubset(dublin, placemark);
   });
 
   test("delete One Placemark - success", async () => {

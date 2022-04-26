@@ -1,7 +1,7 @@
 import { assert } from "chai";
 import { placemarkService } from "./placemark-service.js";
 import { assertSubset } from "../test-utils.js";
-import { maggie, maggieCredentials, mozart, testPlacemarks } from "../fixtures.js";
+import { maggie, maggieCredentials, dublin, testPlacemarks } from "../fixtures.js";
 
 suite("Placemark API tests", () => {
 
@@ -15,19 +15,19 @@ suite("Placemark API tests", () => {
     await placemarkService.deleteAllUsers();
     user = await placemarkService.createUser(maggie);
     await placemarkService.authenticate(maggieCredentials);
-    mozart.userid = user._id;
+    dublin.userid = user._id;
   });
 
   teardown(async () => {});
 
   test("create placemark", async () => {
-    const returnedPlacemark = await placemarkService.createPlacemark(mozart);
+    const returnedPlacemark = await placemarkService.createPlacemark(dublin);
     assert.isNotNull(returnedPlacemark);
-    assertSubset(mozart, returnedPlacemark);
+    assertSubset(dublin, returnedPlacemark);
   });
 
   test("delete a placemark", async () => {
-    const placemark = await placemarkService.createPlacemark(mozart);
+    const placemark = await placemarkService.createPlacemark(dublin);
     const response = await placemarkService.deletePlacemark(placemark._id);
     assert.equal(response.status, 204);
     try {

@@ -33,47 +33,47 @@ export const testUsers = [
   }
 ];
 
-export const mozart = {
-  title: "Mozart Favourites"
+export const dublin = {
+  title: "Dublin Favourites"
 };
 
-export const concerto = {
-  "title": "Violin Concerto No. 3",
-  "artist": "Mozart",
-  "duration": 15
+export const concert = {
+  "title": "3 Arena",
+  "location": "Dublin",
+  "date": "12 April 2022"
 };
 
 
-export const beethoven = {
-  title: "Beethoven Favourites"
+export const cork = {
+  title: "Cork Favourites"
 };
 
 export const testPlacemarks = [
   {
-    title: "Beethoven Sonatas"
+    title: "Cork Parks"
   },
   {
-    title: "Beethoven Concertos"
+    title: "Cork Village"
   },
   {
-    title: "Beethoven Symphonies"
+    title: "Cork Studios"
   }
 ];
 
 export const testTMarkers = [
   {
-    "title": "Piano Sonata No. 3",
-    "artist": "Beethoven",
-    "duration": 5
+    "title": "Fitzgeralds",
+    "location": "Cork",
+    "date": "30 April 2022"
   },
   {
-    "title": "Piano Sonata No. 7",
-    "artist": "Beethoven",
-    "duration": 6
+    "title": "Douglas",
+    "location": "Cork",
+    "date": "21 April 2022"
   },
   {
-    "title": "Piano Sonata No. 10",
-    "artist": "Beethoven",
-    "duration": 4
+    "title": "MiFitness",
+    "location": "Cork",
+    "date": "15 April 2022"
   }
 ];
