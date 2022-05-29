@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>{{title}}</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+    <script src="https://use.fontawesome.com/releases/v5.15.4/js/all.js"></script>
+    <link rel="stylesheet" href="styles/style.css">
+    <style>
+      .center {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .background {
+        background: url("https://static.vecteezy.com/system/resources/previews/002/386/432/original/world-map-green-isolated-on-white-background-free-vector.jpg") center /cover;
+      }
+    </style>
+  </head>
+
+  <body>
+  <section class="center">
+    <div class="hero-body">
+      {{{content}}}
+      {{> error }}
+    </div>
+  </section>
+
+  <section class="section">
+    <div class="container">
+      <div class="columns is-multiline">
+        <div class="column is-one-third">
+          <div class="notification is-light">
+            <article class="message is-primary">
+              <div class="message-header">
+                <p>Advantages of Placemark</p>
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              <div class="message-body">
+                <li>Save your favourite places</li>
+                <li>Mark your pin on the map</li>
+              </div>
+            </article>
+            </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="notification is-light">
+            <article class="message is-primary">
+              <div class="message-header">
+                <p>Primary</p>
+                <button class="delete" aria-label="delete"></button>
+              </div>
+              <div class="message-body">
+               
+              </div>
+            </article>
+          </div>
+        </div>
+        <div class="column is-one-third">
+          <div class="notification is-light">
+              <div class="media-content">
+              <div class="field">
+                <p class="control">
+                  <textarea class="textarea" placeholder="Add a comment..."></textarea>
+                </p>
+              </div>
+              <nav class="level">
+                <div class="level-left">
+                  <div class="level-item">
+                    <a class="button is-info">Submit</a>
+                  </div>
+                </div>
+              </nav>
+          </div>
+      </div>
+    </div>
+  </section>
+
+<section class="hero background has-text-black">
+  <div class="hero-foot">
+    <nav class="level">
+  <p class="level-item has-text-centered">
+      <i style="font-size: 48px; color: Green;" class="fas fa-map-marker-alt"></i>
+  </p>
+  </nav>
+  </div>
+</section>
+  </body>
+</html>

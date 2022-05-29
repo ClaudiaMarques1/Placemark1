@@ -1,0 +1,58 @@
+{
+  "name": "placemark",
+  "version": "0.9.0",
+  "description": "",
+  "main": "index.js",
+  "type": "module",
+  "scripts": {
+    "start": "node src/server.js ",
+    "dev": "./node_modules/.bin/nodemon src/server.js  --ignore 'src/models/json/*.json'",
+    "lint": "./node_modules/.bin/eslint . --ext .js",
+    "test": "./node_modules/mocha/bin/mocha --ui tdd test/**/*.js",
+    "testmodels": "./node_modules/mocha/bin/mocha --ui tdd test/models/**/*.js",
+    "testapi": "./node_modules/mocha/bin/mocha --ui tdd test/api/**/*.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ClaudiaMarques1/Placemark.git"
+  },
+  "keywords": [
+    "node",
+    "hapi"
+  ],
+  "author": "edeleastar",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ClaudiaMarques1/Placemark/issues"
+  },
+  "homepage": "https://github.com/ClaudiaMarques1/Placemark#readme",
+  "dependencies": {
+    "@hapi/boom": "^9.1.4",
+    "@hapi/cookie": "^11.0.2",
+    "@hapi/hapi": "^20.2.1",
+    "@hapi/inert": "^6.0.5",
+    "@hapi/vision": "^6.1.0",
+    "cloudinary": "^1.28.1",
+    "dotenv": "^14.3.2",
+    "handlebars": "^4.7.7",
+    "hapi-auth-jwt2": "^10.2.0",
+    "hapi-swagger": "^14.2.4",
+    "joi": "^17.6.0",
+    "jsonwebtoken": "^8.5.1",
+    "lowdb": "^3.0.0",
+    "mais-mongoose-seeder": "^1.0.7",
+    "mongoose": "^6.1.8",
+    "uuid": "^8.3.2"
+  },
+  "devDependencies": {
+    "axios": "^0.25.0",
+    "chai": "^4.3.6",
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "mocha": "^9.2.0",
+    "nodemon": "^2.0.15",
+    "prettier": "^2.5.1"
+  }
+}

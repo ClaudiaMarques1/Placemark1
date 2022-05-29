@@ -1,0 +1,34 @@
+<table class="table is-fullwidth">
+  <thead>
+    <tr>
+      <th>Marker</th>
+      <th>Location</th>
+      <th>Date</th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each placemark.markers}}
+      <tr>
+        <td>
+          {{title}}
+        </td>
+        <td>
+          {{location}}
+        </td>
+        <td>
+          {{date}}
+        </td>
+        <td>
+          <a href="/marker/{{../placemark._id}}/editmarker/{{_id}}" class="ui icon button">
+            <i class="fas fa-edit"></i>
+          </a>
+        </td>
+                <td>
+          <a href="/placemark/{{../placemark._id}}/deletemarker/{{_id}}" class="ui icon button">
+            <i class="fas fa-trash"></i>
+          </a>
+        </td>
+      </tr>
+    {{/each}}
+  </tbody>
+</table>
